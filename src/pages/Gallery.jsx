@@ -103,14 +103,14 @@ export default function Gallery({ t }) {
   {/* МОДАЛЬНОЕ ОКНО ДЛЯ ФОТО И ВИДЕО */}
       {activeItem && (
         <div
-          onClick={() => setActiveItem(null)}
-          className="fixed inset-0 bg-black/90 backdrop-blur-sm z-[100] flex items-center justify-center p-4"
-        >
+  onClick={() => setActiveItem(null)}
+  className="fixed inset-0 bg-black/90 backdrop-blur-sm z-[2000] flex items-center justify-center p-4"
+>
           <button
-            onClick={() => setActiveItem(null)}
-            className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white flex items-center justify-center transition-all z-10"
-            aria-label="Close"
-          >
+  onClick={() => setActiveItem(null)}
+  className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white flex items-center justify-center transition-all z-[2010]"
+  aria-label="Close"
+>
             <X className="w-6 h-6" />
           </button>
 
