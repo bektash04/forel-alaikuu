@@ -57,13 +57,14 @@ export default function MapBlock({ t, onOpenFullMap }) {
         <div className="relative rounded-[2rem] overflow-hidden shadow-2xl shadow-slate-900/20 border-4 border-white">
 
           {/* Сама карта */}
-          <div className="h-[400px] lg:h-[500px] relative">
-            <MapContainer
-              center={FARM_POSITION}
-              zoom={11}
-              scrollWheelZoom={false}
-              className="w-full h-full"
-            >
+<div className="h-[400px] lg:h-[500px] relative isolate" style={{ zIndex: 0 }}>
+  <MapContainer
+    center={FARM_POSITION}
+    zoom={11}
+    scrollWheelZoom={false}
+    className="w-full h-full"
+    style={{ zIndex: 0 }}
+  >
               <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

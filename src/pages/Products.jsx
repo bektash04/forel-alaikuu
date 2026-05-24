@@ -25,7 +25,7 @@ const sendToWhatsApp = (productName, weight = null) => {
     {
       name: t.products.live,
       desc: t.products.liveDesc,
-      price: 650,
+      price: 850,
       weight: '0.8-1.2 кг',
       color: 'from-cyan-500 to-teal-600',
       img: '/images/product-live.jpg',
@@ -33,7 +33,7 @@ const sendToWhatsApp = (productName, weight = null) => {
     {
       name: t.products.chilled,
       desc: t.products.chilledDesc,
-      price: 750,
+      price: 900,
       weight: '0.6-1.0 кг',
       color: 'from-orange-500 to-red-600',
       img: '/images/product-chilled.jpg',

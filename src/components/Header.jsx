@@ -16,7 +16,7 @@ export default function Header({ currentPage, setCurrentPage, lang, setLang, t }
   };
 
   return (
-    <header className="sticky top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl shadow-md shadow-slate-900/5 py-3 border-b border-slate-100">
+    <header className="sticky top-0 left-0 right-0 z-[1000] bg-white/95 backdrop-blur-xl shadow-md shadow-slate-900/5 py-3 border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-5 lg:px-8 flex items-center justify-between">
         <div onClick={() => goTo('home')}>
           <Logo />

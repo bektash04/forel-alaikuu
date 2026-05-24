@@ -163,22 +163,22 @@ export default function FullMapModal({ isOpen, onClose, t }) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[200] bg-black/90 backdrop-blur-sm flex items-center justify-center p-2 lg:p-4">
+    <div className="fixed inset-0 z-[2000] bg-black/90 backdrop-blur-sm flex items-center justify-center p-2 lg:p-4">
 
       {/* Кнопка закрытия */}
       <button
-        onClick={onClose}
-        className="absolute top-4 right-4 z-[210] w-12 h-12 rounded-full bg-white hover:bg-red-500 hover:text-white text-slate-900 flex items-center justify-center transition-all shadow-2xl"
-        aria-label="Закрыть"
-      >
+  onClick={onClose}
+  className="absolute top-4 right-4 z-[2010] w-12 h-12 rounded-full bg-white hover:bg-red-500 hover:text-white text-slate-900 flex items-center justify-center transition-all shadow-2xl"
+  aria-label="Закрыть"
+>
         <X className="w-6 h-6" />
       </button>
 
       {/* Контейнер модалки */}
-      <div className="w-full h-full max-w-7xl max-h-[95vh] rounded-2xl overflow-hidden bg-white shadow-2xl flex flex-col lg:flex-row">
+      <div className="w-full h-full max-w-7xl max-h-[95vh] rounded-2xl overflow-hidden bg-white shadow-2xl flex flex-col-reverse lg:flex-row">
 
         {/* ЛЕВАЯ ПАНЕЛЬ — управление маршрутом */}
-        <div className="w-full lg:w-96 bg-gradient-to-br from-slate-900 to-teal-900 text-white p-6 lg:p-8 overflow-y-auto flex-shrink-0">
+<div className="w-full lg:w-96 bg-gradient-to-br from-slate-900 to-teal-900 text-white p-6 lg:p-8 overflow-y-auto flex-shrink-0 max-h-[50vh] lg:max-h-none">
 
           <div className="mb-6">
             <span className="inline-block px-3 py-1 rounded-full bg-orange-500/20 text-orange-300 text-xs font-bold tracking-[0.15em] mb-3">
@@ -279,14 +279,14 @@ export default function FullMapModal({ isOpen, onClose, t }) {
           </div>
         </div>
 
-        {/* ПРАВАЯ ЧАСТЬ — сама большая карта */}
-        <div className="flex-1 relative">
-          <MapContainer
-            center={FARM_POSITION}
-            zoom={9}
-            scrollWheelZoom={true}
-            className="w-full h-full"
-          >
+       {/* ПРАВАЯ ЧАСТЬ — сама большая карта */}
+<div className="flex-1 relative min-h-[300px] lg:min-h-0">
+  <MapContainer
+    center={FARM_POSITION}
+    zoom={9}
+    scrollWheelZoom={true}
+    className="w-full h-full"
+  >
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
