@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* === Стили панели инструкций маршрута Leaflet === */
+
+/* Контейнер панели — маленький, в правом углу, прокручиваемый */
+.leaflet-routing-container {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+  max-width: 280px !important;
+  max-height: 300px !important;
+  overflow-y: auto !important;
+  font-size: 11px !important;
+  margin: 10px !important;
+  padding: 0 !important;
+}
+
+/* Заголовок с расстоянием и временем */
+.leaflet-routing-alt h2,
+.leaflet-routing-alt h3 {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  padding: 8px 12px !important;
+  margin: 0 !important;
+  background: linear-gradient(to right, #f97316, #ea580c);
+  color: white !important;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Скрываем по умолчанию (свернуто) — раскрывается при наведении */
+.leaflet-routing-container-hide .leaflet-routing-alt {
+  display: none;
+}
+
+/* Список шагов маршрута */
+.leaflet-routing-alt table {
+  font-size: 10px !important;
+  width: 100% !important;
+}
+
+.leaflet-routing-alt table td {
+  padding: 4px 8px !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+  color: #475569 !important;
+}
+
+.leaflet-routing-alt tr:hover td {
+  background: #f8fafc !important;
+}
+
+/* Кнопка свернуть/развернуть */
+.leaflet-routing-collapse-btn {
+  display: block !important;
+  background: #f97316 !important;
+  color: white !important;
+  border-radius: 6px !important;
+  padding: 4px 8px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+}
+
+/* Скрываем альтернативные маршруты */
+.leaflet-routing-alternatives-container {
+  display: none !important;
+}
+
+/* Скрываем геокодеры (поля ввода адресов) */
+.leaflet-routing-geocoders {
+  display: none !important;
+}
